@@ -201,7 +201,7 @@
                             <label for="oudercontact-klas">Klas: </label>
                             <select name="oudercontact-klas" id="oudercontact-klas">
                                 <option value="1a">1A</option>
-                                <option value="1a">1B</option>
+                                <option value="1b">1B</option>
                             </select>
                         </div>
                     </form>
@@ -232,6 +232,7 @@
             const selectedClass = oudercontactClassElement.value;
             const newLink = `https://${selectedClass}.oudercontact.martijnluyckx.be/`;
             oudercontactLinkElement.href = newLink;
+            console.log('changed to', newLink);
         });
     </script>
 </body>
