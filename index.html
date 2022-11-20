@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300%3B700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <title>Juf Nicole</title>
+    <style>
+        body,
+        html,
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Alexandria', sans-serif;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 30px;
+            box-sizing: border-box;
+            background: #FAFFD1;
+            background: -webkit-linear-gradient(to right, #FAFFD1, #e1e7ae);
+            background: linear-gradient(to right, #FAFFD1, #e1e7ae);
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            margin-bottom: 20px;
+            font-size: 3em;
+        }
+
+        header h2 {
+            font-weight: 100;
+        }
+
+        .games {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .game {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 330px;
+            height: 190px;
+            border-radius: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+            background: #41295a;
+            background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+            background: linear-gradient(to right, #2F0743, #41295a);
+            color: white;
+            padding: 35px;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            margin-right: 10px;
+        }
+
+        .game .title {
+            font-size: 1.6em;
+        }
+
+        .game .info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2em;
+        }
+
+        .game .info .controls .control {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+        }
+
+        .game .info .controls .control label {
+            margin-right: 20px;
+        }
+
+        .game .info .controls .control input,
+        .game .info .controls .control select {
+            border: none;
+            box-shadow: none;
+            background: white;
+            font-size: 1em;
+            font-family: 'Alexandria', sans-serif;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .game .info .go {
+            background: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            color: #2F0743;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.7em;
+            transition: all 0.2s ease-out;
+            box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+        }
+
+        .game .info .go:hover {
+            transform: scale(1.2);
+            box-shadow: rgba(255, 255, 255, 0.12) 0px 54px 55px, rgba(255, 255, 255, 0.06) 0px -12px 30px, rgba(255, 255, 255, 0.06) 0px 4px 6px, rgba(255, 255, 255, 0.08) 0px 12px 13px, rgba(255, 255, 255, 0.04) 0px -3px 5px;
+        }
+
+        .game .info .go a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Juf Nicole</h1>
+        <h2>Spelenderwijs rekenen in het eerste leerjaar.</h2>
+    </header>
+    <main>
+        <div class="games">
+            <div class="game">
+                <h3 class="title">Splitsen</h3>
+                <div class="info">
+                    <form id="splitsen-form" class="controls">
+                        <div class="control">
+                            <label for="splitsen-tot">Tot: </label>
+                            <input type="number" name="splitsen-tot" id="splitsen-tot" min="1" max="20" step="1"
+                                value="5">
+                        </div>
+                        <div class="control">
+                            <label for="splitsen-timer">Timer: </label>
+                            <input type="number" name="splitsen-timer" id="splitsen-timer" min="0" max="60" step="1"
+                                value="0">
+                        </div>
+                    </form>
+                    <div class="go">
+                        <a id="splitsen-link" href="https://splitsen.jufnicole.be">→</a>
+                    </div>
+                </div>
+            </div>
+            <div class="game">
+                <h3 class="title">Over de 10?</h3>
+                <div class="info">
+                    <form id="over10-form" class="controls">
+                    </form>
+                    <div class="go">
+                        <a id="over10-link" href="https://over10.martijnluyckx.be">→</a>
+                    </div>
+                </div>
+            </div>
+            <div class="game">
+                <h3 class="title">Samen 10</h3>
+                <div class="info">
+                    <form id="samen10-form" class="controls">
+                    </form>
+                    <div class="go">
+                        <a id="samen10-link" href="https://over10.martijnluyckx.be/samen10.html">→</a>
+                    </div>
+                </div>
+            </div>
+            <div class="game">
+                <h3 class="title">Min tot 10</h3>
+                <div class="info">
+                    <form id="mintot10-form" class="controls">
+                    </form>
+                    <div class="go">
+                        <a id="mintot10-link" href="https://over10.martijnluyckx.be/mintot10.html">→</a>
+                    </div>
+                </div>
+            </div>
+            <div class="game">
+                <h3 class="title">Oudercontact</h3>
+                <div class="info">
+                    <form id="oudercontact-form" class="controls">
+                        <div class="control">
+                            <label for="oudercontact-klas">Klas: </label>
+                            <select name="oudercontact-klas" id="oudercontact-klas">
+                                <option value="1a">1A</option>
+                                <option value="1a">1B</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div class="go">
+                        <a id="oudercontact-link" href="https://over10.martijnluyckx.be/mintot10.html">→</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Website gemaakt door <a href="https://martijnluyckx.be">Martijn</a> van <a href="https://ckx.be">CKX</a>.</p>
+    </footer>
+    <script>
+        const splitsenLinkElement = document.querySelector('#splitsen-link');
+        const splitsenMaxNumberElement = document.querySelector('#splitsen-tot');
+        const splitsenTimerElement = document.querySelector('#splitsen-timer');
+        document.querySelector('#splitsen-form').addEventListener('change', function () {
+            const maxNumber = splitsenMaxNumberElement.value;
+            const timer = splitsenTimerElement.value;
+            const newLink = `https://splitsen.jufnicole.be/?tot=${maxNumber}&timer=${timer}`;
+            splitsenLinkElement.href = newLink;
+        });
+
+        const oudercontactLinkElement = document.querySelector('#oudercontact-link');
+        const oudercontactClassElement = document.querySelector('#oudercontact-klas');
+        document.querySelector('#oudercontact-form').addEventListener('change', function () {
+            const selectedClass = oudercontactClassElement.value;
+            const newLink = `https://${selectedClass}.oudercontact.martijnluyckx.be/`;
+            oudercontactLinkElement.href = newLink;
+        });
+    </script>
+</body>
+
+</html>
