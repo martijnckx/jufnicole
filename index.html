@@ -206,7 +206,7 @@
                         </div>
                     </form>
                     <div class="go">
-                        <a id="oudercontact-link" href="https://1a.oudercontact.martijnluyckx.be/">→</a>
+                        <a id="oudercontact-link" href="https://oc.ckx.be/1a/">→</a>
                     </div>
                 </div>
             </div>
@@ -230,7 +230,7 @@
         const oudercontactClassElement = document.querySelector('#oudercontact-klas');
         document.querySelector('#oudercontact-form').addEventListener('change', function () {
             const selectedClass = oudercontactClassElement.value;
-            const newLink = `https://${selectedClass}.oudercontact.martijnluyckx.be/`;
+            const newLink = `https://oc.ckx.be/${selectedClass}/`;
             oudercontactLinkElement.href = newLink;
         });
     </script>
