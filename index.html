@@ -193,23 +193,6 @@
                     </div>
                 </div>
             </div>
-            <div class="game">
-                <h3 class="title">Oudercontact</h3>
-                <div class="info">
-                    <form id="oudercontact-form" class="controls">
-                        <div class="control">
-                            <label for="oudercontact-klas">Klas: </label>
-                            <select name="oudercontact-klas" id="oudercontact-klas">
-                                <option value="1a">1A</option>
-                                <option value="1b">1B</option>
-                            </select>
-                        </div>
-                    </form>
-                    <div class="go">
-                        <a id="oudercontact-link" href="https://oc.ckx.be/1a/">→</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
     <footer>
@@ -224,14 +207,6 @@
             const timer = splitsenTimerElement.value;
             const newLink = `https://splitsen.jufnicole.be/?tot=${maxNumber}&timer=${timer}`;
             splitsenLinkElement.href = newLink;
-        });
-
-        const oudercontactLinkElement = document.querySelector('#oudercontact-link');
-        const oudercontactClassElement = document.querySelector('#oudercontact-klas');
-        document.querySelector('#oudercontact-form').addEventListener('change', function () {
-            const selectedClass = oudercontactClassElement.value;
-            const newLink = `https://oc.ckx.be/${selectedClass}/`;
-            oudercontactLinkElement.href = newLink;
         });
     </script>
 </body>
